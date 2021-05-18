@@ -1,0 +1,60 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header card-header-rosa">
+                        <h4 class="card-title">{{"añadirrutina" | translate}}</h4>
+                        <p class="card-category">{{"relleneform" | translate}}</p>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="addRutina" (ngSubmit)="onSubmit()">
+                            <div class="row">
+                          
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput formControlName="nombreRutina"  placeholder="Nombre rutina" type="text">
+                                     <mat-error *ngIf="addRutina.get('nombreRutina').hasError('required')">
+                                      El nombre de dieta es requerido
+                                      </mat-error>  
+                                      <mat-error *ngIf="addRutina.get('nombreRutina').hasError('maxlength')">
+                                        El nombre de dieta es muy largo
+                                      </mat-error>
+                                      <mat-error *ngIf="addRutina.get('nombreRutina').hasError('minlength')">
+                                        El nombre de dieta es muy corto
+                                      </mat-error>    
+                               
+                                  </mat-form-field>
+                                </div>
+                            
+                              
+                            </div>
+
+                          
+                       
+                        
+                            <div class="row">
+                              <div class="col-md-12">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput formControlName="img"  placeholder="Link de imagen" type="text">
+                                  <mat-error *ngIf="addRutina.get('img').hasError('pattern')">
+                                    El link no es valido
+                                   </mat-error>
+                                </mat-form-field>
+                              </div>
+                            </div>
+                            <button mat-raised-button [disabled]="addRutina.invalid" type="submit" class="btn btn-primary pull-right">{{"crearr" | translate}}</button>
+                           
+                          
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+       
+        </div>
+    </div>
+  </div>
+  

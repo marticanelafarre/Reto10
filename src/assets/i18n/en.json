@@ -1,0 +1,144 @@
+{
+    "home":{
+        "HOME1": "All the routines and diets you want, and much more",
+        "HOME2": "Enjoy wherever you want for free or subscribe for an experience premium",
+        "Entrar": "Get in",
+        "Planes": "Plans",
+        "Elige": "Choose one of our three plans to get started",
+        "Usuario": "Registered user",
+        "Desconectarse": "Sing Out",
+        "GRATUITO": "FREE",
+        "infog": "You just need to register, no cards, no commitments. Free users will be able to access predesigned routines and diets for each of their needs.",
+        "precio": "€ 59.99/month",
+        "infop": "You will have at your disposal a team of professionals who will attend to your needs. You will have personalized diets and routines, consultations with our professionals and much more.",
+        "dispositivo": "Enjoy Wellness from any device with internet",
+        "infod": "Access WELLNESS from any device with internet access, take your routines and diets with you everywhere and check them at any time.",
+        "asesorate": "Get advice from our professionals",
+        "infoa": "Enjoy a personal treatment with our professionals, either by video call or in person from our offices through the premium plan.",
+        "interfaz": "Enjoy a simple and comfortable interface",
+        "infoi": "Have all your routines and diets organized through a comfortable calendar, with descriptions of each exercise and dishes, how to do them and descriptive images or videos.",
+        "Forma Parte": "Form Part",
+        "De": "Of",
+        "WELLNESS!": "WELLNESS!",
+        "preguntas": "Frequent questions",
+        "que es": "What is WELLNESS?",
+        "cancelo": "How do I cancel?",
+        "ofrece": "What routines and diets does the free plan offer?",
+        "donde": "Where can I get advice in person?",
+        "infoq": "WELLNESS is a web platform created so that users can organize their diets and routines, either through the free plan pre-designed or customized by our professionals through the premium plan.",
+        "infoo": "We offer three routines and three predefined diets. We offer hypertrophy, strength and hit routines, and diets to lose weight, gain mass and maintain weight.",
+        "infoc": "You can cancel your subscription from the Profile section, the subscription will be canceled at the end of the month.",
+        "infodo": "You can find us at CEEILLEIDA Building 2 in Complejo la Caparrella, Lleida, Catalunya 25192. To reserve an appointment with our nutritionists you can specify an hour through the web. In case you want information for business you can specify an hour through the following email: informacio.wellness@gmail.com."
+    },
+    
+    "PROXIMAMENTE":"Coming Soon",
+    "login-register":{
+
+        "bienvenido":"Welcome",
+        "entrar":"Get in",
+        "usuario":"User",
+        "contra":"Password"
+
+    },
+    
+    
+    "Dietas":"Diets",
+    "Menu Principal":"Main Menu",
+    "Rutinas":"Routines",
+    "HacersePREMIUM": "Be VIP",
+    "VerPerfil": "View Profile",
+
+    
+
+ 
+        "Usuarios": "Users",
+        "Premiums": "VIP",
+
+  
+
+    
+
+        "listadod":"List of Diets",
+        "todasd":"All diets",
+        "dietas":"Diet",
+        "tipod":"Diet Type",
+        "nombred":"Name",
+        "acciond":"Actions"
+
+    ,
+
+
+
+        "listador":"List of Routines",
+        "todasr":"All Routines",
+        "rutinas":"Routines",
+        "tipor":"Routine Type",
+        "accionr":"Actions",
+
+
+
+
+        "usuario":"User:",
+        "direccion":"Direction:",
+        "altura":"Height:",
+        "peso":"Weight:",
+        "editarperf":"Edit profile",
+        "modificarpref":"Modify Profile",
+        "cambiarcontra":"Change Password",
+        "encuesta":"Take Survey",
+
+
+
+
+
+        "modificarc":"Modify password",
+        "contraoblig":"The password is mandatory.",
+        "nocoincide":"Passwords do not match",
+        "salir":"Exit without saving",
+        "modificar":"Modify",
+
+        "modificardiet":"Modify diet",
+        "verdias":"See days",
+
+
+
+        "listadoda":"List of Diets",
+        "todosr":"All records",
+        "dietasa":"Diet",
+        "añadir":"Add",
+        "idd":"ID",
+        "tipoda":"Diet Type",
+        "tipousu":"Type of user",
+        "imagend":"Image",
+
+        "listadorut":"Routine List",
+        "rutinasad":"Routines",
+        "nombreru":"Routine Name",
+       
+        "PAGINA":"Return to the main page",
+        "PAGINA1":"Page not found",
+
+        "añadirdiet":"Add diet",
+        "relleneform":"Fill the form",
+        "creard":"Create diet",
+
+        "añadirdia":"Add days",
+        "dia":"Day",
+        "añadirdiad":"Add days to the diet",
+        "nuevodia":"New day",
+
+        "listadousu":"List of Users",
+        "todosusus":"All users",
+        "usuarios":"Users",
+        "nombreusu":"Username",
+        "accionusu":"Actions",
+
+        "NombreD": "Diet Name",
+
+        "añadirrutina":"Add routine",
+        "completeform":"Complete the form to register it",
+        "crearr":"Create routine"
+
+
+    
+}

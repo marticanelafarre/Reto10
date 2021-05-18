@@ -1,0 +1,119 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header card-header-rosa">
+                        <h4 class="card-title">{{"modificardiet" | translate}}</h4>
+                        <p class="card-category">{{"relleneform" | translate}}</p>
+                    </div>
+                    <form [formGroup]="ModificarRutina" (ngSubmit)="Submit()" *ngIf="ready==true">
+
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput formControlName="Nrutina" [ngModel]="this.Nrutina"
+                                            placeholder="Nombre rutina" type="text">
+                                        <mat-error *ngIf="ModificarRutina.get('Nrutina').hasError('required')">
+                                            El nombre de dieta es requerido
+                                        </mat-error>
+                                        <mat-error *ngIf="ModificarRutina.get('Nrutina').hasError('maxlength')">
+                                            El nombre de dieta es muy largo
+                                        </mat-error>
+                                        <mat-error *ngIf="ModificarRutina.get('Nrutina').hasError('minlength')">
+                                            El nombre de dieta es muy corto
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput formControlName="imagen" [ngModel]="this.imagen"
+                                            placeholder="Imagen" type="text">
+                                        <mat-error *ngIf="ModificarRutina.get('imagen').hasError('pattern')">
+                                            El link no es valido
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <button mat-raised-button type="submit" [disabled]="ModificarRutina.invalid"
+                                class="btn btn-primary pull-right">Modificar dieta</button>
+                        </div>
+                    </form>
+                    <button mat-raised-button type="submit" (click)="MostrarDias()"
+                        class="btn btn-primary pull-right">Ver dias</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="MostrarDiasB">
+
+        <div *ngFor="let item of Ranking_modificarArray.controls;index as i "
+            [formGroup]="Ranking_modificarArray.controls[i]">
+
+            <div class="card">
+                <div class="card-body">
+
+
+
+
+                    Dia {{i+1}}
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <mat-form-field class="example-full-width">
+                                <textarea matInput formControlName="Ejercicio" placeholder="Ejercicio"
+                                    type="text"></textarea>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-4">
+                            <mat-form-field class="example-full-width">
+                                <textarea matInput formControlName="Ejercicio2" placeholder="Ejercicio2 "
+                                    type="text"></textarea>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-4">
+                            <mat-form-field class="example-full-width">
+                                <textarea matInput formControlName="Ejercicio3" placeholder="Ejercicio3" type="text"></textarea>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <mat-form-field class="example-full-width">
+                                <textarea matInput formControlName="Ejercicio4" placeholder="Ejercicio4"
+                                    type="text"></textarea>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-4">
+                            <mat-form-field class="example-full-width">
+                                <textarea matInput formControlName="Ejercicio5" placeholder="Ejercicio5"
+                                    type="text"></textarea>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-4">
+                            <mat-form-field class="example-full-width">
+                                <textarea matInput formControlName="Ejercicio6" placeholder="Ejercicio6" type="text"></textarea>
+                            </mat-form-field>
+                        </div>
+                   
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <button mat-raised-button type="submit" (click)="ModificarDias()"
+            class="btn btn-primary pull-right">Guardar</button>
+
+    </div>
+
+</div>

@@ -1,0 +1,83 @@
+<div class="main-content">
+    <div class="container-fluid">
+      <div class="card">
+        <div class="card-header card-header-primary">
+          <h4 class="card-title">{{"listadoda" | translate}}</h4>
+          <p class="card-category">{{"todosr" | translate}}</p>
+        </div>
+        <div class="card-body">
+          <div id="typography">
+            <div class="card-title">
+              <div class="row">
+                <div class="col">
+                  <h2>{{"dietasa" | translate}}</h2>
+                </div>
+                <div class="col-7">
+  
+                </div>
+                <div class="col">
+                  <a routerLink="/AddDieta" routerLinkActive="active" class="btn btn-primary btn-round">{{"añadir" | translate}}</a>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+  
+              <div class="table-responsive">
+                <table class="table">
+                  <thead class=" text-primary">
+                    <th>
+                      {{"idd" | translate}}
+                    </th>
+                    <th>
+                      {{"NombreD" | translate}}
+                    </th>
+                    <th>
+                      {{"tipoda" | translate}}
+                    </th>
+
+                    <th>
+                      {{"imagend" | translate}}
+                    </th>
+                    <th>
+                      {{"accionusu" | translate}}
+                    </th>
+
+                  </thead>
+                  <tbody *ngFor="let item of dietas; index as i">
+                    <tr>
+                      <td>
+                        {{item[0]}}
+                      </td>
+                      <td>
+                        {{item[1]}}
+                      </td>
+                      <td>
+                        {{item[2]}}
+                      </td>
+
+                      <td>
+                        <button (click)="openDialog(item[4])" class="btn btn-primary btn-round"> <i class="material-icons">
+                          image</i></button>
+                      </td>
+                     
+                      <td>
+                        <button [routerLink]="['/ModificarDieta',item[0]]" routerLinkActive="active"
+                        class="btn btn-primary btn-round"> <i class="material-icons">
+                          edit</i> </button>
+                          <button (click)="Borrar(item[0])" class="btn btn-primary btn-round"> <i class="material-icons">
+                            delete</i> </button>
+                      </td>
+                      
+  
+                    </tr>
+  
+                  </tbody>
+                </table>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

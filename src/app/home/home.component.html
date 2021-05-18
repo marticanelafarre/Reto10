@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>WELLNESS</title>
+</head>
+
+
+<body id="page-top">
+    <!-- Header-->
+   
+      
+              
+    <header class="masthead">
+        <ul style="float:left">
+               
+            
+                  
+            
+
+            <ul class="navbar-nav">
+               
+                <br><br>
+           
+
+              <li><mat-form-field class="primary">
+                <mat-label>  <i class="material-icons">language</i></mat-label>
+                <mat-select disableRipple>
+                  <mat-option value="1"> <a class="dropdown-item" (click)="English()"><img style="width: 25%;" src="../../assets/img/english2.png" alt=""></a></mat-option>
+                
+                  <mat-option value="3"> <a class="dropdown-item" (click)="Espanol()"><img style="width: 25%; " src="../../assets/img/españa2.png" alt=""></a></mat-option>
+                </mat-select>
+              </mat-form-field></li>
+          </ul>
+          </ul>
+        
+        <div class="container">
+          
+            <div class="masthead-heading text-uppercase"> {{"home.HOME1" | translate}}</div>
+            <div class="masthead-subheading">{{"home.HOME2" | translate}}</div>
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" (click)='openDialogLogin()'>{{"home.Entrar" | translate}}</a>
+        </div>
+    </header>
+    <!-- Planes-->
+    <section class="page-section" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">{{"home.Planes" | translate}}</h2>
+                <h3 class="section-subheading text-muted">{{"home.Elige" | translate}}</h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4" style="margin-left: 100px;">
+                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" (click)='openDialogLogin()'>{{"home.Usuario" | translate}}</a>
+                    <h2 class="my-3">{{"home.GRATUITO" | translate}}</h2>
+                    <p class="text-muted">{{"home.infog" | translate}}</p>
+                </div>
+                <div class="col-md-4" style="margin-left: 130px;">
+                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger">{{"Premiums" | translate}}</a>
+                    <br>
+                    <span style="color: red;"><b>proximamente</b></span>
+                    <h2 class="my-3">{{"PREMIUM" | translate}}</h2>
+                    <p class="text-muted">{{"home.infop" | translate}}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Info-->
+    <section class="page-section" id="about">
+        <div class="container">
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid"
+                            src="../../assets/img/hands-1851218_1920.jpg" alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="subheading">{{"home.dispositivo" | translate}}</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">{{"home.infod" | translate}}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image"><img class="rounded-circle img-fluid"
+                            src="../../assets/img/video-conference-5162927_640.jpg" alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="subheading">{{"home.asesorate" | translate}}</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">{{"home.infoa" | translate}}</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid"
+                            src="../../assets/img/bulletin-board-3233653_640.jpg" alt="..." /></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="subheading">{{"home.interfaz" | translate}}</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="text-muted">{{"home.infoi" | translate}}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image">
+                        <h4>
+                            {{"home.Forma Parte" | translate}}
+                            <br />
+                            {{"home.De" | translate}}
+                            <br />
+                            {{"home.WELLNESS!" | translate}}
+                        </h4>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Preguntas-->
+
+    <div class="text-center">
+        <h2 class="section-heading text-uppercase">{{"home.preguntas" | translate}}</h2>
+    </div>
+
+    <br>
+
+    <div class="container">
+        <button (click)='openDialogInfo(wellness)' type="button" class="btn btn-primary" data-toggle="modal" data-target="#que_es"
+            style="margin-left: 70px;">
+            {{"home.que es" | translate}}
+        </button>
+
+
+        <button (click)='openDialogInfo(cancelo)' type="button" class="btn btn-primary" data-toggle="modal" data-target="#cancelar"
+            style="margin-left: 20px;">
+            {{"home.cancelo" | translate}}
+        </button>
+
+
+        <button  (click)='openDialogInfo(gratuito)' type="button"  class="btn btn-primary" 
+            style="margin-left: 20px;">
+            {{"home.ofrece" | translate}}
+        </button>
+
+
+        <button (click)='openDialogInfo(asesorarme)' type="button" class="btn btn-primary" data-toggle="modal" data-target="#ubi" style="margin-left: 20px;">
+            {{"home.donde" | translate}}
+        </button>
+
+        <!-- Footer-->
+        <footer class="footer ">
+            <div class="container-fluid">
+              
+                <div class="copyright pull-right">
+                    <img src="../../../assets/img/WELLNESS 2p.png" alt="">
+                    <!-- &copy;
+                    {{test | date: 'yyyy'}},  -->
+                   
+                </div>
+            </div>
+        </footer>

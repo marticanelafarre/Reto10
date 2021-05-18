@@ -1,0 +1,254 @@
+<!--Modal calendar-->
+<div mat-dialog-content>
+  <div class="modal-body">
+
+
+    <!-- DIETA -->
+    <div *ngFor="let item of dietas">
+      <div *ngIf="Tipode=='Dieta'" class="row">
+
+        <div *ngIf="item['Desayuno'] != null && item['Desayuno'] != ''" class="col-md-3">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Desayuno</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+              <p>
+                {{item['Desayuno']}}
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <div *ngIf="item['Desayuno2'] != null && item['Desayuno2'] != ''" class="col-md-3">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Desayuno 2</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+              <p>
+                {{item['Desayuno2']}}
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <div *ngIf="item['Comida'] != null && item['Comida'] != ''" class="col-md-3">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Comida</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+              <p>
+                {{item['Comida']}}
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <div *ngIf="item['Merienda'] != null && item['Merienda'] != ''" class="col-md-3">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Merienda</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+              <p>
+                {{item['Merienda']}}
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <div *ngIf="item['Merienda2'] != null && item['Merienda2'] != ''" class="col-md-3">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Merienda 2</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+              <p>
+                {{item['Merienda2']}}
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <div *ngIf="item['Cena'] != null && item['Cena'] != ''" class="col-md-3">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Cena</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+              <p>
+                {{item['Cena']}}
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <div *ngIf="item['Comentarios'] != null  && item['Comentarios'] != ''" class="col-md-3">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Comentarios</mat-card-title>
+            </mat-card-header>
+
+            <mat-card-content>
+              <p>
+                {{item['Comentarios']}}
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+
+        <div class="modal-footer">
+          <button type="button" (click)='borrar()' class="btn btn-primary" data-dismiss="modal">Eliminar Dieta</button>
+        </div>
+      </div>
+    </div>
+    <!-- COMENTARIOS -->
+    <div *ngIf="Tipode=='Comentarios'" class="row">
+
+      <div class="col-md-12">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>COMENTARIOS</mat-card-title>
+
+          </mat-card-header>
+
+          <mat-card-content>
+            <p>
+              {{comentarios}}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <button type="button" class="btn btn-primary" (click)='borrar()' data-dismiss="modal">Eliminar Comentario</button>
+    </div>
+
+    <!-- RUTINA -->
+    <div *ngFor="let item of rutinas">
+      <div *ngIf="Tipode=='Rutina'">
+        <div class="row">
+          <div *ngIf="item['Ejercicio'] != null && item['Ejercicio'] != ''" class="col-md-3">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Ejercicio 1</mat-card-title>
+              </mat-card-header>
+
+              <mat-card-content>
+                <p>
+                  {{item['Ejercicio']}}
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+          <div *ngIf="item['Ejercicio2'] != null && item['Ejercicio2'] != ''" class="col-md-3">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Ejercicio 2</mat-card-title>
+              </mat-card-header>
+
+              <mat-card-content>
+                <p>
+                  {{item['Ejercicio2']}}
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+          <div *ngIf="item['Ejercicio3'] != null && item['Ejercicio3'] != ''" class="col-md-3">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Ejercicio 3</mat-card-title>
+              </mat-card-header>
+
+              <mat-card-content>
+                <p>
+                  {{item['Ejercicio3']}}
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+          <div *ngIf="item['Ejercicio4'] != null && item['Ejercicio4'] != ''" class="col-md-3">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Ejercicio 4</mat-card-title>
+              </mat-card-header>
+
+              <mat-card-content>
+                <p>
+                  {{item['Ejercicio4']}}
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+          <div *ngIf="item['Ejercicio5'] != null && item['Ejercicio5'] != ''" class="col-md-3">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Ejercicio 5</mat-card-title>
+              </mat-card-header>
+
+              <mat-card-content>
+                <p>
+                  {{item['Ejercicio5']}}
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+          <div *ngIf="item['Ejercicio6'] != null && item['Ejercicio6'] != ''" class="col-md-3">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Ejercicio 6</mat-card-title>
+              </mat-card-header>
+
+              <mat-card-content>
+                <p>
+                  {{item['Ejercicio6']}}
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+          <div *ngIf="(item['Ejercicio'] == null || item['Ejercicio'] == '' )&& (item['Ejercicio2'] == null || item['Ejercicio2'] == '') && (item['Ejercicio3'] == null || item['Ejercicio3'] == '') && (item['Ejercicio4'] == null || item['Ejercicio4'] == '') && (item['Ejercicio5'] == null || item['Ejercicio5'] == '')
+          &&( item['Ejercicio6'] == null || item['Ejercicio6'] == '' )
+          " class="col-md-3">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Descanso</mat-card-title>
+              </mat-card-header>
+
+              <mat-card-content>
+
+              </mat-card-content>
+            </mat-card>
+          </div>
+
+      
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)='borrar()' data-dismiss="modal">Eliminar Rutina</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
